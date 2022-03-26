@@ -1,0 +1,12 @@
+.qs-ans{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+.qs-one, .qs-two{
+    margin: 20px;
+    border: 1px solid sandybrown;
+    border-radius: 5px;
+    padding: 10px;
+}

@@ -43,7 +43,7 @@ const Shop = () => {
             }
             </div>
             <div className='cart-container'>
-                <h2 className='cart-heading'>Cart Item</h2>
+                <h2 className='cart-heading'>Selected Laptop</h2>
                 <div>
                     {
                     cart.map(item => (
