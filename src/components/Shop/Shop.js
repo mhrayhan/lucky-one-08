@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
@@ -24,9 +23,10 @@ const Shop = () => {
         const items = [...cart];
         const randomItem = [Math.floor((Math.random() * items.length))]
         if(randomItem <= (items.length - 1)){
-            setItem(items[randomItem]);
-            console.log(items[randomItem].name);
-            <Cart items={items[randomItem]}></Cart>
+            let randomObj = [];
+            randomObj.push(items[randomItem])
+            setItem(randomObj);
+            // console.log(randomObj);
         }
     }
     
@@ -56,6 +56,18 @@ const Shop = () => {
                     ))
                     }
                 </div>
+                {
+                    item.map(item => (
+                        
+                   <div>
+                       <h5>Select For You</h5>
+                       <div className='cart-item , select-cart'>
+                        <img className='cart-img' src={item.img} alt="" />
+                        <p >{item.name}</p>
+                    </div>
+                   </div>
+                    ))
+                }
                 <div>
                     
                 </div>
