@@ -10,3 +10,9 @@
     padding: 10px;
     box-shadow: 0 0 10px rgba(244, 165, 96, 0.664);
 }
+
+@media only screen and (max-width: 600px) {
+.qs-ans{
+    flex-direction: column;
+}
+}

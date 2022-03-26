@@ -47,12 +47,12 @@ const Shop = () => {
                 <h2 className='cart-heading'>Selected Laptop</h2>
                 <div>
                     {
-                    cart.map(item => <Cart item={item}></Cart>)
+                    cart.map(item => <Cart key={item.id} item={item}></Cart>)
                     }
                 </div>
                 <div>
                     {
-                    item.map(item => <Random item={item}></Random>)
+                    item.map(item => <Random key={item.id} item={item}></Random>)
                     }
                 </div>
                 <div>

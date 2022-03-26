@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Random = (props) => {
-    console.log(props);
     const {img, name} = props.item;
     return (
         <div>
