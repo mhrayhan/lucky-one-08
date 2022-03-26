@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Macbook Pro",
+    "price": 90000,
+    "img": "https://i.ibb.co/59fRBwt/img-01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Asus vivobook",
+    "price": 30000,
+    "img": "https://i.ibb.co/41XwjgG/img-09.webp"
+  },
+  {
+    "id": 3,
+    "name": "HP Elite",
+    "price": 40000,
+    "img": "https://i.ibb.co/Dt5BJz3/img-08.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dell Latitude",
+    "price": 50000,
+    "img": "https://i.ibb.co/jJnFDdF/img-07.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Macbook",
+    "price": 60000,
+    "img": "https://i.ibb.co/txcnpF2/img-06.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Asus Zenbook",
+    "price": 70000,
+    "img": "https://i.ibb.co/RBHhrwF/img-05.jpg"
+  },
+  {
+    "id": 7,
+    "name": "HP",
+    "price": 80000,
+    "img": "https://i.ibb.co/41XwjgG/img-09.webp"
+  },
+  {
+    "id": 8,
+    "name": "Macbook Pro 256 GB",
+    "price": 90000,
+    "img": "https://i.ibb.co/ZM7YnhN/img-03.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Acer Nitro",
+    "price": 44000,
+    "img": "https://i.ibb.co/kmxwjzv/img-02.jpg"
+  }
+]
