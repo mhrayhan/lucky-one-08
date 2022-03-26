@@ -1,9 +1,13 @@
 import React from 'react';
 
 const Cart = (props) => {
+    const {img, name} = props.item;
     return (
         <div>
-            <h1>{props.length}</h1>
+            <div className='cart-item'>
+                <img className='cart-img' src={img} alt="" />
+                <p >{name}</p>
+            </div>
         </div>
     );
 };

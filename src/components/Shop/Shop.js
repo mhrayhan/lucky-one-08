@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import Random from '../Random/Random';
 import './Shop.css'
 
 const Shop = () => {
@@ -13,8 +15,7 @@ const Shop = () => {
     } , [])
 
     const addToCartBtn = (product) => {
-        
-        console.log(product);
+        // console.log(product);
         const newCart = [...cart, product];
         setCart(newCart)
         // console.log(newCart);
@@ -46,28 +47,14 @@ const Shop = () => {
                 <h2 className='cart-heading'>Selected Laptop</h2>
                 <div>
                     {
-                    cart.map(item => (
-                        <div>
-                            <div className='cart-item'>
-                                <img className='cart-img' src={item.img} alt="" />
-                                <p >{item.name}</p>
-                            </div>
-                        </div>
-                    ))
+                    cart.map(item => <Cart item={item}></Cart>)
                     }
                 </div>
-                {
-                    item.map(item => (
-                        
-                   <div>
-                       <h5>Select For You</h5>
-                       <div className='cart-item , select-cart'>
-                        <img className='cart-img' src={item.img} alt="" />
-                        <p >{item.name}</p>
-                    </div>
-                   </div>
-                    ))
-                }
+                <div>
+                    {
+                    item.map(item => <Random item={item}></Random>)
+                    }
+                </div>
                 <div>
                     
                 </div>
