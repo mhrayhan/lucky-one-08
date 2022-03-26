@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [item, setItem] = useState([]);
     useEffect( () => {
         fetch('product.json')
         .then(res => res.json())
@@ -12,15 +14,22 @@ const Shop = () => {
     } , [])
 
     const addToCartBtn = (product) => {
+        
         console.log(product);
         const newCart = [...cart, product];
         setCart(newCart)
-        console.log(newCart);
+        // console.log(newCart);
     }
-    const chooseOne = (product) => {
-        const cartItem = [...cart, product];
-        
+    const chooseOne = () => {
+        const items = [...cart];
+        const randomItem = [Math.floor((Math.random() * items.length))]
+        if(randomItem <= (items.length - 1)){
+            setItem(items[randomItem]);
+            console.log(items[randomItem].name);
+            <Cart items={items[randomItem]}></Cart>
+        }
     }
+    
 
     return (
         <div className='shop-container'>
@@ -38,14 +47,20 @@ const Shop = () => {
                 <div>
                     {
                     cart.map(item => (
-                        <div className='cart-item'>
-                            <img className='cart-img' src={item.img} alt="" />
-                            <p >{item.name}</p>
+                        <div>
+                            <div className='cart-item'>
+                                <img className='cart-img' src={item.img} alt="" />
+                                <p >{item.name}</p>
+                            </div>
                         </div>
                     ))
                     }
                 </div>
+                <div>
+                    
+                </div>
                 <button onClick={chooseOne} className='choose-btn'>Choose One For Me</button>
+                <button className='choose-btn'>Choose Again</button>
             </div>
         </div>
     );
